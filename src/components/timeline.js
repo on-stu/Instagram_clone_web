@@ -2,7 +2,9 @@ import React from 'react'
 
 function Timeline() {
     return (
-        <p>I am timeline</p>
+        <div className="container col-span-2">
+            <p>I am timeline</p>
+        </div>
     )
 }
 

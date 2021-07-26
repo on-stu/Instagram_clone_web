@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@welldone-software/why-did-you-render": "^6.2.0",
     "auto-prefixer": "^0.4.2",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",

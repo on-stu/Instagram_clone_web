@@ -9,7 +9,7 @@ export default function Signup() {
     const { firebase } = useContext(FirebaseContext);
 
     const [username, setUsername] = useState('');
-    const [fullname, setFullname] = useState('');
+    const [fullName, setFullName] = useState('');
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
 
@@ -28,14 +28,14 @@ export default function Signup() {
           await firebase.firestore().collection('users').add({
             userId: createdUserResult.user.uid,
             username: username.toLowerCase(),
-            fullname,
+            fullName,
             emailAddress: emailAddress.toLowerCase(),
             following: [],
             dateCreated: Date.now()
           });
           history.push(ROUTES.DASHBOARD);
         } catch (error) {
-          setFullname('');
+          setFullName('');
           setEmailAddress('');
           setPassword('');
           setUsername('');
@@ -74,9 +74,9 @@ export default function Signup() {
               aria-label="Enter your full name"
               type="text"
               placeholder="Full Name"
-              value={fullname}
+              value={fullName}
               className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
-              onChange={({target}) => setFullname(target.value)}
+              onChange={({target}) => setFullName(target.value)}
             />
             <input
               aria-label="Enter your email address"
